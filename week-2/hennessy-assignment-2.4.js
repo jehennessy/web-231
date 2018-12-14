@@ -14,7 +14,7 @@
 // header
 const header = require('../hennessy-header.js');
 
-console.log(header.display("Jordan", "Hennessy", "Exercise 2.3"));
+console.log(header.display("Jordan", "Hennessy", "Assignment 2.4"));
 // end header
 
 // variables
