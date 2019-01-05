@@ -26,7 +26,7 @@ var states = ["Alabama", "Nebraska", "Iowa", "California", "Nevada"]
 function arr() {
   for (var x = 0; x < states.length; x++) {
     console.log(states[x]);
-}
+  }
 }
 
 // predicate
