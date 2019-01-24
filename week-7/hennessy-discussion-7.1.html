@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Discussion 7.1</title>
+    <author>Jordan Hennessy</author>
+    <style>
+      #greeting {margin: auto; color:cadetblue; text-decoration: none;}
+      #text {margin: auto;}
+      div {width: 80%; margin: auto; display: block;}
+    </style>
+    <script>
+      function changeColor() {
+       document.getElementById("greeting").color = 'aquamarine';
+      };
+      function showText(){
+        document.getElementByClass("text").innerHTML = "It's so nice to meet you!"
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1 id="greeting" onmouseover="changeColor()" onclick="showText()">Hello</h1>
+      <p id="text"></p>
+    </div>
+  </body>
+</html>
