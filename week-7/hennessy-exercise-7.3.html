@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  hennessy-exercise-7.3.js
+; Author: Professor Krasso
+; Date:   26 January 2019
+; Modified By: Jordan Hennessy
+; Description: Client side JavaScript
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.3</title>
+  <link rel="stylesheet" type="text/css" href="../site.css">
+</head>
+<body>
+
+<div id="list">
+  <ol>
+    <script> // adding list items to HTML
+      document.write("<li>Oranges</li>");
+      document.write("<li>Apples</li>");
+      document.write("<li>Pears</li>");
+      document.write("<li>Limes</li>");
+      document.write("<li>Lemons</li>");
+    </script>
+  </ol>
+</div>
+
+<div id="table-list"></div>
+
+<script> // creating a table with innerHTML
+  document.getElementById('table-list').innerHTML = "<table>" +
+    "<thead>" +
+      "<tr>" +
+        "<th>Id</th>" +
+        "<th>Item</th>" +
+      "</tr>" +
+    "<thead>" +
+    "<tbody>" +
+      "<tr><td>1</td><td>Oranges</td></tr>" +
+      "<tr><td>2</td><td>Apples</td></tr>" +
+      "<tr><td>3</td><td>Pears</td></tr>" +
+      "<tr><td>4</td><td>Limes</td></tr>" +
+      "<tr><td>5</td><td>Lemons</td></tr>" +
+    "</tbody>" +
+    "</table>"
+</script>
+
+</body>
+</html>
