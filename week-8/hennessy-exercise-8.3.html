@@ -1,0 +1,124 @@
+<!--
+============================================
+; Title:  hennessy-exercise-8.3.html
+; Author: Professor Krasso
+; Date:   3 February 2019
+; Modified By: Jordan Hennessy
+; Description: jQuery
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+</head>
+<body>
+  <div id="topBar"></div>
+
+  <h2 class="edge">This is a Title</h2>
+
+  <p class="edge">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Phasellus id hendrerit felis, vel consequat nulla. Pellentesque
+    varius eros magna, id porttitor ipsum rhoncus quis. Fusce consectetur
+    convallis eros et pulvinar. Suspendisse vitae lectus et eros accumsan blandit
+    vitae nec mauris. Nam sed odio a tellus tincidunt viverra eu sed lacus.
+    Suspendisse sem nisi, eleifend quis dui elementum, pharetra viverra sapien.
+    Donec orci tortor, sagittis non vulputate vitae, blandit vitae nisl.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+    cubilia Curae; Duis congue nisl augue, ac aliquam nulla tempus convallis.
+    Integer ac sollicitudin magna, non gravida magna. Fusce vitae varius eros.
+    Donec vitae leo iaculis, euismod nisl sed, egestas ligula. Vestibulum ultricies
+    porttitor lorem eget ultricies. Etiam ut est elit. Phasellus blandit, ante nec
+    malesuada scelerisque, enim libero varius purus, ac elementum nibh tellus porta quam.
+    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+  </p>
+
+  <button class="edge" id="toggle">Click Here!</button>
+
+  <table class="edge">
+
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+    </tr>
+
+    <tr>
+      <td><a href="#" class="fruitId">1</a></td>
+      <td>Apple</td>
+    </tr>
+
+    <tr>
+      <td><a href="#" class="fruitId">2</a></td>
+      <td>Banana</td>
+    </tr>
+
+    <tr>
+      <td><a href="#" class="fruitId">3</a></td>
+      <td>Orange</td>
+    </tr>
+
+    <tr>
+      <td><a href="#" class="fruitId">4</td>
+      <td>Mango</td>
+    </tr>
+
+    <tr>
+      <td><a href="#" class="fruitId">5</td>
+      <td>Cherry</td>
+    </tr>
+
+  </table>
+
+<script type="text/javascript">
+
+  $(function(){
+
+    $("#toggle").click(function(){ // toggle paragraph on and off with the button
+      $("p").toggle();
+    });
+
+    $(".fruitId").click(function(message){ // shows alert when id is clicked
+      message.preventDefault();
+      var fruitId = $(this).text();
+      var fruitType = $(this).closest("td").next().text();
+      alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
+    });
+
+    // styling font
+    $("body").css("font-family", "'Roboto', sans-serif");
+    $("h2").css("font-weight", "500");
+    $("p").css("font-weight", "300");
+    $("button").css("font-weight", "400");
+    $("th").css("font-weight", "400");
+    $("td").css("font-weight", "300");
+
+    // styling table
+    $("tr:nth-child(even)").css("background-color", "#008C72");
+    $("tr:nth-child(odd)").css("background-color", "#007369");
+    $("th").css("background-color", "#003840");
+    $("table").css("color", "#fff");
+    $(".fruitId").css("color", "#fff");
+
+    // styling top bar
+    $("#topBar").css("height", "100px");
+    $("#topBar").css("background-color", "#005A5B");
+
+    // setting margins
+    $("#topBar").css("margin-bottom", "20px");
+    $(".edge").css("margin", "0 20px 20px");
+
+  });
+
+</script>
+
+</body>
+</html>
