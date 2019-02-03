@@ -1,0 +1,35 @@
+<!--
+============================================
+; Title:  hennessy-discussion-8.1.html
+; Author: Jordan Hennessy
+; Date:   30 January 2019
+; Modified By:
+; Description: Create a simple HTML page with at least 2 jQuery errors
+;===========================================
+-->
+<!DOCTYPE HTML!>
+<html style="margin: 100px;">
+  <head>
+    <meta charset="UTF-8">
+    <title>Discussion 8.1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Hello There</h1>
+    <p style="width: 300px; height: auto; color: white; padding: 200px; font-size: 38px; ">Click the button to delete me!</p>
+    <button>Click Me!</button>
+    <script>
+      $(function(){
+        $("h1").mouseenter(function(){
+          $(this).css("color", "blue");
+        });
+
+        $("p").css(background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet););
+
+        $("button")(function(){
+          $("p").fadeOut("slow");
+        });
+      });
+    </script>
+  </body>
+</html>

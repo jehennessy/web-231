@@ -1,0 +1,64 @@
+<!--
+============================================
+; Title:  hennessy-exercise-8.2.html
+; Author: Professor Krasso
+; Date:   3 February 2019
+; Modified By: Jordan Hennessy
+; Description: Dynamic HTML
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <style type="text/css">
+    ul {
+      list-style: none;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+</head>
+<body>
+
+<script>
+  document.write("<div></div>"); // adding a div for the top bar
+  document.getElementsByTagName("DIV")[0].style.backgroundColor = "#005A5B"; // adding a background  color to top bar
+  document.getElementsByTagName("DIV")[0].style.height = "100px"; // setting height for top bar
+  document.getElementsByTagName("DIV")[0].style.marginBottom = "20px"; // setting bottom margin for top bar so that unordered list is 20px below
+</script>
+
+<div id="fruits"></div>
+
+<script>
+
+  function fruit(id, type){ // creating a constructor object
+    this.id = id; // defining the parameters
+    this.type = type;
+  }
+  var fruits = [ // creating an array
+    new fruit('1', 'Apple'),
+    new fruit('2', 'Banana'),
+    new fruit('3', 'Orange'),
+    new fruit('4', 'Mango')
+  ];
+
+  var out = "<h2>Favorite Fruits</h2><ul>"; // adding title and unordered list
+  for (var x = 0; x < fruits.length; x++) { // iterating over array
+    out += "<li>" + fruits[x].id + " " + fruits[x].type + "</li>";
+  };
+  out += "</ul>";
+
+  document.getElementById('fruits').innerHTML = out; // adding array to HTML
+
+  document.getElementById('fruits').style.margin = "0 auto"; // centering unordered list
+  document.getElementById('fruits').style.width = "200px"; // setting width for unordered list
+  document.getElementById('fruits').style.fontFamily = "Roboto, sans-serif"; // setting font family for unordered list
+  document.getElementsByTagName("H2")[0].style.fontWeight = "500"; // setting font weight for heading
+  document.getElementsByTagName("UL")[0].style.fontWeight = "300"; // setting font weight for unordered list
+</script>
+
+</body>
+</html>
